@@ -10,8 +10,8 @@ import streamlit as st
 #importing the stock price of infosys of year 2023 from 2 jan to 29 dec
 
 
-data = pd.read_csv('INFY_DATA.csv')
-fd = pd.read_csv('INFY_DATA.csv')
+data = pd.read_csv('INFY_DATA (1).csv')
+fd = pd.read_csv('INFY_DATA (1).csv')
 
 st.title('Stock price prediction')
 st.write(data.describe())
@@ -126,7 +126,7 @@ else:
     #classification problem,whether I should buy or sell the stock
     fd['Open - Close'] = fd['Open'] - fd['Close']
     fd['High - Low'] = fd['High'] - fd['Low']
-    X = fd['Open - Close','High - Low']]
+    X = fd['Open - Close','High - Low']
     #X.head(5)
     Y = np.where(fd['Close'].shift(-1)>fd['Close'],1,-1)
     #if i purchase a stock today for 500,i have historical data 
