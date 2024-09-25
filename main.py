@@ -126,7 +126,7 @@ else:
     #classification problem,whether I should buy or sell the stock
     fd['Open - Close'] = fd['Open'] - fd['Close']
     fd['High - Low'] = fd['High'] - fd['Low']
-    X = fd['Open - Close','High - Low']
+    X = fd[['Open - Close','High - Low']]
     #X.head(5)
     Y = np.where(fd['Close'].shift(-1)>fd['Close'],1,-1)
     #if i purchase a stock today for 500,i have historical data 
