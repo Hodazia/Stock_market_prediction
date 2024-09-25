@@ -10,8 +10,8 @@ import streamlit as st
 #importing the stock price of infosys of year 2023 from 2 jan to 29 dec
 
 
-data = pd.read_csv('INFY_DATA (1).csv')
-fd = pd.read_csv('INFY_DATA (1).csv')
+data = pd.read_csv('INFY_DATA.csv')
+fd = pd.read_csv('INFY_DATA.csv')
 
 st.title('Stock price prediction')
 st.write(data.describe())
